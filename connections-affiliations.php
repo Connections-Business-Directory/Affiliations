@@ -596,10 +596,9 @@ if ( ! class_exists( 'Connections_Affiliations' ) ) {
 
 				add_action(
 					'admin_notices',
-					 create_function(
-						 '',
-						'echo \'<div id="message" class="error"><p><strong>ERROR:</strong> Connections must be installed and active in order use Connections Affiliations.</p></div>\';'
-						)
+					 function() {
+						echo '<div id="message" class="error"><p><strong>ERROR:</strong> Connections must be installed and active in order use Connections Affiliations.</p></div>';
+						}
 				);
 
 				return FALSE;
